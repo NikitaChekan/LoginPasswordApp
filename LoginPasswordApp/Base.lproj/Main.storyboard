@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-qr-VrF">
-                                <rect key="frame" x="54" y="349.66666666666669" width="306" height="197.00000000000006"/>
+                                <rect key="frame" x="54" y="328" width="306" height="197"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-KT-OGg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-KT-OGg">
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="88"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-9I-4qP">
@@ -81,7 +81,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WxW-qr-VrF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OBu-Lu-bdN"/>
-                            <constraint firstItem="WxW-qr-VrF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ds1-KR-ibs"/>
+                            <constraint firstItem="WxW-qr-VrF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-125" id="sdj-kU-xqg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -102,8 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-U7-IOf">
-                                <rect key="frame" x="63" y="184" width="288" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Name!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-U7-IOf">
+                                <rect key="frame" x="52" y="184" width="310" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>

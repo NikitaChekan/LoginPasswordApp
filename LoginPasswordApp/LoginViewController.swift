@@ -9,23 +9,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var loginButton: UIButton!
 
+    // MARK: Private Properties
     private var userName = "User"
     private var password = "Password"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    // MARK: Life Cycles Methods
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
-
+    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
             welcomeVC.welcomeUser = userNameTF.text
     }
     
+    // MARK: IBActions
     @IBAction func loginButtonTapped() {
         if userNameTF.text != userName || passwordTF.text != password {
             showAlert(
@@ -55,11 +60,7 @@ class LoginViewController: UIViewController {
         passwordTF.text = ""
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
+    // MARK: Private Methods
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okeyAction = UIAlertAction(title: "OK", style: .default)
