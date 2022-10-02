@@ -15,11 +15,23 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, " + welcomeUser + "!"
         
+        setGradientForBackground()
+        welcomeLabel.text = "Welcome, " + welcomeUser + "!"
     }
 
     @IBAction func LogOutButtonDidTapped() {
         dismiss(animated: true)
+    }
+    
+    private func setGradientForBackground() {
+        let gradient = CAGradientLayer()
+        
+        gradient.frame = view.bounds
+        gradient.colors = [
+            UIColor.systemRed.cgColor,
+            UIColor.systemBlue.cgColor
+        ]
+        view.layer.insertSublayer(gradient, at: 0)
     }
 }
