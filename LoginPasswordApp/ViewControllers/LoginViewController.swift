@@ -14,13 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: Private Properties
-    private let userName = "User"
-    private let password = "Password"
+    private let user = User.getUser()
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userName
+        welcomeVC.userName = user.login
     }
     
     // MARK: Life Cycles Methods
@@ -31,7 +30,7 @@ class LoginViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func loginButtonTapped() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Invalid login or password!",
                 message: "Please, enter correct login and password.",
@@ -44,8 +43,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterDate(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Hmmm...", message: "Okey, your name - \(userName)")
-        : showAlert(title: "Hmmm...", message: "Okey, your password - \(password)")
+        ? showAlert(title: "Hmmm...", message: "Okey, your name - \(user.login)")
+        : showAlert(title: "Hmmm...", message: "Okey, your password - \(user.password)")
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
