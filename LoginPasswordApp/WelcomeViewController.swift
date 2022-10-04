@@ -11,17 +11,13 @@ final class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     
-    var welcomeUser: String!
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setGradientForBackground()
-        welcomeLabel.text = "Welcome, " + welcomeUser + "!"
-    }
-
-    @IBAction func LogOutButtonDidTapped() {
-        dismiss(animated: true)
+        welcomeLabel.text = "Welcome, \(userName)!"
     }
     
     private func setGradientForBackground() {

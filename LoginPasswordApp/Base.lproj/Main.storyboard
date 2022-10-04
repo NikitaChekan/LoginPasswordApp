@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-qr-VrF">
-                                <rect key="frame" x="54" y="328" width="306" height="197"/>
+                                <rect key="frame" x="54" y="318" width="306" height="197"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-KT-OGg">
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="88"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-9I-4qP">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-9I-4qP">
                                                 <rect key="frame" x="0.0" y="0.0" width="306" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-tR-0JJ">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-tR-0JJ">
                                                 <rect key="frame" x="0.0" y="54" width="306" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
@@ -45,7 +45,6 @@
                                                 <state key="normal" title="LOG IN"/>
                                                 <connections>
                                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="D72-zw-JO8"/>
-                                                    <segue destination="nXQ-V6-SHC" kind="presentation" id="XI1-Io-lm7"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4YN-bm-bdb">
@@ -56,15 +55,15 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Forgot User Name?"/>
                                                         <connections>
-                                                            <action selector="userNameForgotButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RJ-FJ-bax"/>
+                                                            <action selector="forgotRegisterDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sP-Ok-SPO"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csa-us-xNt">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csa-us-xNt">
                                                         <rect key="frame" x="173" y="0.0" width="133" height="42"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Forgot Password?"/>
                                                         <connections>
-                                                            <action selector="passwordForgotButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="cis-L3-TqZ"/>
+                                                            <action selector="forgotRegisterDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guh-v2-mQ7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -81,13 +80,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WxW-qr-VrF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OBu-Lu-bdN"/>
-                            <constraint firstItem="WxW-qr-VrF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-125" id="sdj-kU-xqg"/>
+                            <constraint firstItem="WxW-qr-VrF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-135" id="sdj-kU-xqg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="n1p-TH-4au" id="Tqf-Um-Uow"/>
                         <outlet property="passwordTF" destination="f6w-tR-0JJ" id="JQd-l3-8hP"/>
                         <outlet property="userNameTF" destination="dcL-9I-4qP" id="wjX-vR-pX7"/>
+                        <segue destination="nXQ-V6-SHC" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="J3o-jO-28q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,8 +115,7 @@
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogOutButtonDidTapped" destination="nXQ-V6-SHC" eventType="touchUpInside" id="LzQ-px-p0b"/>
-                                    <segue destination="gy1-zs-xus" kind="unwind" unwindAction="unwindWithSegue:" id="cVv-d4-Lx3"/>
+                                    <segue destination="gy1-zs-xus" kind="unwind" unwindAction="unwindSegueWithSegue:" id="pKu-wg-d2O"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥳" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-7y-hKi">

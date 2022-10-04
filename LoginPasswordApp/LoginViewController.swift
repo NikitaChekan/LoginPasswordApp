@@ -12,11 +12,16 @@ class LoginViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    @IBOutlet var loginButton: UIButton!
-
+    
     // MARK: Private Properties
-    private var userName = "User"
-    private var password = "Password"
+    private let userName = "User"
+    private let password = "Password"
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userName
+    }
     
     // MARK: Life Cycles Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -24,46 +29,36 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.welcomeUser = userNameTF.text
-    }
-    
     // MARK: IBActions
     @IBAction func loginButtonTapped() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        guard userNameTF.text == userName, passwordTF.text == password else {
             showAlert(
                 title: "Invalid login or password!",
-                message: "Please, enter correct login and password."
+                message: "Please, enter correct login and password.",
+                textField: passwordTF
             )
-            passwordTF.text = ""
+            return
         }
-    }
-
-    @IBAction func userNameForgotButtonTapped() {
-        showAlert(
-            title: "Hmmm...",
-            message: "Okey, your name - User"
-        )
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func passwordForgotButtonTapped() {
-        showAlert(
-            title: "Hmmm...",
-            message: "Okey, your password - Password"
-        )
+    @IBAction func forgotRegisterDate(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Hmmm...", message: "Okey, your name - \(userName)")
+        : showAlert(title: "Hmmm...", message: "Okey, your password - \(password)")
     }
     
-    @IBAction func unwind(segue: UIStoryboardSegue) {
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
     }
     
     // MARK: Private Methods
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "OK", style: .default)
+        let okeyAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         
         alert.addAction(okeyAction)
         present(alert, animated: true)
