@@ -2,7 +2,7 @@
 //  WelcomeViewController.swift
 //  LoginPasswordApp
 //
-//  Created by Nikits Chekan on 01.10.2022.
+//  Created by Nikita Chekan on 01.10.2022.
 //
 
 import UIKit
