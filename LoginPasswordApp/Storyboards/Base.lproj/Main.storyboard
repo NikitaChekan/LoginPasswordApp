@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController keyboardType="off" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginPasswordApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-qr-VrF">
-                                <rect key="frame" x="54" y="318" width="306" height="197"/>
+                                <rect key="frame" x="7" y="149" width="306" height="197"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-KT-OGg">
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="88"/>
@@ -86,29 +86,29 @@
                     <connections>
                         <outlet property="passwordTF" destination="f6w-tR-0JJ" id="JQd-l3-8hP"/>
                         <outlet property="userNameTF" destination="dcL-9I-4qP" id="wjX-vR-pX7"/>
-                        <segue destination="nXQ-V6-SHC" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="J3o-jO-28q"/>
+                        <segue destination="QKK-Hk-G8n" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="J3o-jO-28q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36.92307692307692" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="49" y="1"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="ZFx-xz-d50">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="nXQ-V6-SHC" customClass="WelcomeViewController" customModule="LoginPasswordApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDg-fK-5Mu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Name!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-U7-IOf">
-                                <rect key="frame" x="52" y="184" width="310" height="48"/>
+                                <rect key="frame" x="5" y="140" width="310" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heB-xs-I34">
-                                <rect key="frame" x="152.66666666666666" y="700" width="108.99999999999997" height="42"/>
+                                <rect key="frame" x="105.5" y="357" width="109" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOG OUT">
@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥳" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-7y-hKi">
-                                <rect key="frame" x="164" y="262" width="86" height="95.666666666666686"/>
+                                <rect key="frame" x="117" y="218" width="86" height="95.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +136,7 @@
                             <constraint firstItem="sU4-7y-hKi" firstAttribute="top" secondItem="IEZ-U7-IOf" secondAttribute="bottom" constant="30" id="hkF-vB-Ii0"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill.checkmark" catalog="system" id="bgx-8X-lsB"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="IEZ-U7-IOf" id="CL2-Bh-0nk"/>
                     </connections>
@@ -143,10 +144,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OY5-HW-P46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gy1-zs-xus" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="787" y="3"/>
+            <point key="canvasLocation" x="833" y="799"/>
+        </scene>
+        <!--User Info View Controller-->
+        <scene sceneID="MGZ-tk-thF">
+            <objects>
+                <viewController id="iKz-jO-uem" customClass="UserInfoViewController" customModule="LoginPasswordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SXt-ay-w3g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mFH-vn-cUk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ADp-ii-EeE">
+                        <barButtonItem key="rightBarButtonItem" title="BIO" image="info.circle.fill" catalog="system" style="done" id="E7H-iU-sOU">
+                            <color key="tintColor" systemColor="linkColor"/>
+                            <connections>
+                                <segue destination="bkL-5p-Nmh" kind="show" id="6am-tQ-ECM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmb-0x-q7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="1645"/>
+        </scene>
+        <!--BIO-->
+        <scene sceneID="GMh-SE-ckP">
+            <objects>
+                <viewController id="bkL-5p-Nmh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="791-hL-lrS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Никита родился в 1997 году..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR8-k6-lOw">
+                                <rect key="frame" x="16" y="92.5" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lUr-t0-sDN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hR8-k6-lOw" firstAttribute="leading" secondItem="lUr-t0-sDN" secondAttribute="leading" constant="16" id="00m-Vj-JPR"/>
+                            <constraint firstItem="lUr-t0-sDN" firstAttribute="trailing" secondItem="hR8-k6-lOw" secondAttribute="trailing" constant="16" id="dCd-nZ-GxI"/>
+                            <constraint firstItem="hR8-k6-lOw" firstAttribute="top" secondItem="lUr-t0-sDN" secondAttribute="top" id="s5D-o4-R5Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BIO" id="7qg-l9-SuP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69W-Rp-NY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2466" y="1645"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="p0Y-kt-UTv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QKK-Hk-G8n" customClass="TabBarViewController" customModule="LoginPasswordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z1N-qa-Hqx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nXQ-V6-SHC" kind="relationship" relationship="viewControllers" id="MLb-d9-Tcp"/>
+                        <segue destination="HvL-Ab-6WA" kind="relationship" relationship="viewControllers" id="XiT-69-r42"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Okm-95-Hpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="0.0"/>
+        </scene>
+        <!--Nick Chekan-->
+        <scene sceneID="nrM-dl-UEl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HvL-Ab-6WA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nick Chekan" image="folder.fill.badge.person.crop" catalog="system" id="1u6-Ru-gRh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="evs-Yq-eVw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iKz-jO-uem" kind="relationship" relationship="rootViewController" id="xEK-Ok-QMZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0u-Ux-dch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="799"/>
         </scene>
     </scenes>
     <resources>
+        <image name="folder.fill.badge.person.crop" catalog="system" width="128" height="92"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
