@@ -12,32 +12,39 @@ class UserInfoViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var contactLabel: UILabel!
+    
+    @IBOutlet var userPhoto: UIImageView!
     
     var userDataBase: Person?
-    
-//    var name = ""
-//    var surname = ""
-//    var age = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.setGradientForBackground()
+        
         guard let person = userDataBase else { return }
+        userPhoto.image = UIImage(named: "\(person.photo)")
+        
         nameLabel.text = "Имя: \(person.name)"
-        surnameLabel.text = person.surname
-        ageLabel.text = person.age
-        
-//        nameLabel.text = "Имя: \(name)"
-//        surnameLabel.text = "Фамилия: \(surname)"
-//        ageLabel.text = "Возраст: \(age)"
-        
+        surnameLabel.text = "Фамилия: \(person.surname)"
+        ageLabel.text = "Возраст: \(person.age)"
+        countryLabel.text = "Страна: \(person.country)"
+        contactLabel.text = "Telegram: \(person.contact)"
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        userPhoto.layer.cornerRadius = userPhoto.frame.size.height / 2
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userBioVC = segue.destination as? UserBioViewController else { return }
+        
         guard let person = userDataBase else { return }
-        userBioVC.name = person.surname
-        userBioVC.title = "\(person.surname) biography"
+        userBioVC.biography = person.biography
+        userBioVC.title = "\(person.title) bio:"
     }
 
 }

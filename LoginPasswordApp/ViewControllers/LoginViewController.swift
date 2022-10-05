@@ -18,17 +18,16 @@ class LoginViewController: UIViewController {
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = user.person.name
-            } else if let navigationVC = viewController as? UINavigationController {
-                guard let viewController = navigationVC.topViewController else { return }
-                
+            } else if let navigationControllerVC = viewController as? UINavigationController {
+                guard let viewController = navigationControllerVC.topViewController else { return }
                 if let userInfoVC = viewController as? UserInfoViewController {
-                    userInfoVC.view.backgroundColor = .systemGray
                     userInfoVC.userDataBase = user.person
                     userInfoVC.title = user.person.title
                 }
