@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA55B57D28EDEC60001C8430 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55B57C28EDEC60001C8430 /* UserBioViewController.swift */; };
 		DA6FEE3128E86ACA00ADE52B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FEE3028E86ACA00ADE52B /* AppDelegate.swift */; };
 		DA6FEE3328E86ACA00ADE52B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FEE3228E86ACA00ADE52B /* SceneDelegate.swift */; };
 		DA6FEE3528E86ACA00ADE52B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FEE3428E86ACA00ADE52B /* LoginViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA55B57C28EDEC60001C8430 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
 		DA6FEE2D28E86ACA00ADE52B /* LoginPasswordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginPasswordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6FEE3028E86ACA00ADE52B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA6FEE3228E86ACA00ADE52B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DA6FEE3428E86ACA00ADE52B /* LoginViewController.swift */,
 				DA6FEE4428E8751800ADE52B /* WelcomeViewController.swift */,
 				DAA83EB428ECC5E500915AB2 /* UserInfoViewController.swift */,
+				DA55B57C28EDEC60001C8430 /* UserBioViewController.swift */,
 				DAA83EB628ECCE2E00915AB2 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -188,6 +191,7 @@
 				DA6FEE3128E86ACA00ADE52B /* AppDelegate.swift in Sources */,
 				DAA83EB728ECCE2E00915AB2 /* TabBarViewController.swift in Sources */,
 				DA6FEE3328E86ACA00ADE52B /* SceneDelegate.swift in Sources */,
+				DA55B57D28EDEC60001C8430 /* UserBioViewController.swift in Sources */,
 				DABEAD6C28ECBB79006CAD7A /* UserBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

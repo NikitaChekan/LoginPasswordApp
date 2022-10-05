@@ -153,8 +153,38 @@
                     <view key="view" contentMode="scaleToFill" id="SXt-ay-w3g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-9z-2RY">
+                                <rect key="frame" x="16" y="237.5" width="288" height="93.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-w3-qkE">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-Wx-Juc">
+                                        <rect key="frame" x="0.0" y="36.5" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqh-Sh-9tQ">
+                                        <rect key="frame" x="0.0" y="73" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mFH-vn-cUk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eX7-9z-2RY" firstAttribute="leading" secondItem="mFH-vn-cUk" secondAttribute="leading" constant="16" id="0SH-6c-dHP"/>
+                            <constraint firstItem="mFH-vn-cUk" firstAttribute="trailing" secondItem="eX7-9z-2RY" secondAttribute="trailing" constant="16" id="5ga-0o-z5k"/>
+                            <constraint firstItem="eX7-9z-2RY" firstAttribute="centerY" secondItem="SXt-ay-w3g" secondAttribute="centerY" id="XGR-TN-kSg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ADp-ii-EeE">
                         <barButtonItem key="rightBarButtonItem" title="BIO" image="info.circle.fill" catalog="system" style="done" id="E7H-iU-sOU">
@@ -164,6 +194,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="Eqh-Sh-9tQ" id="m2Y-hm-4Hn"/>
+                        <outlet property="nameLabel" destination="7jh-w3-qkE" id="VsK-7e-pgu"/>
+                        <outlet property="surnameLabel" destination="Szr-Wx-Juc" id="Nji-nL-dE3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmb-0x-q7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,7 +207,7 @@
         <!--BIO-->
         <scene sceneID="GMh-SE-ckP">
             <objects>
-                <viewController id="bkL-5p-Nmh" sceneMemberID="viewController">
+                <viewController id="bkL-5p-Nmh" customClass="UserBioViewController" customModule="LoginPasswordApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="791-hL-lrS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,6 +228,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BIO" id="7qg-l9-SuP"/>
+                    <connections>
+                        <outlet property="userBioLabel" destination="hR8-k6-lOw" id="aSB-8B-ErH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69W-Rp-NY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
