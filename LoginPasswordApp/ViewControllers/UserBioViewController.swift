@@ -17,6 +17,7 @@ class UserBioViewController: UIViewController {
         super.viewDidLoad()
         
         view.setGradientForBackground()
+        
         userBioLabel.text = biography
     }
 

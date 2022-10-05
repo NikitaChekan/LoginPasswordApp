@@ -26,7 +26,6 @@ class UserInfoViewController: UIViewController {
         
         guard let person = userDataBase else { return }
         userPhoto.image = UIImage(named: "\(person.photo)")
-        
         nameLabel.text = "Имя: \(person.name)"
         surnameLabel.text = "Фамилия: \(person.surname)"
         ageLabel.text = "Возраст: \(person.age)"
